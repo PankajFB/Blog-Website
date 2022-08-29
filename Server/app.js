@@ -45,17 +45,13 @@ app.post("/newBlog", (req, res) => {
   // .catch(err) => res.json({error :"failed to post the blog"});
 });
 
-
 // to get all the data from the database
-app.get('/view', (req, res)=>{
-  Blog.find((err, val)=>{
-  if(err) res.json(err);
-  else    res.json(val);
+app.get("/view", (req, res) => {
+  Blog.find((err, val) => {
+    if (err) res.json(err);
+    else res.json({data: val});
   });
-  });
-
-
-
+});
 
 app.listen(5000, () => {
   console.log("seriver is running at port 5000");
