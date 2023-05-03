@@ -13,7 +13,7 @@ mongoose
     console.log(e);
   });
 
-// to convert the upcoming data into string because the data coming is in the form of json
+// middleware function in an Express application that allows you to parse incoming JSON request bodies. It is a built-in middleware function that comes with the Express framework.
 app.use(express.json());
 
 // requiring the shema that we have defined
